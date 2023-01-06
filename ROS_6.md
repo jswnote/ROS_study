@@ -30,7 +30,7 @@ ROS 마스터
 
 catkin - ros에서 사용하는 빌드시스템. 빌드시스템이란 소스코드를 컴파일하고 실행파일로 만드는 과정.
 
-<p align="center"><img src = "./images/catkin.png" width = "800"  title = "catkin"></p>
+<p align="center"><img src = "./images/catkin.png" width = "600"  title = "catkin"></p>
 
 작업공간 - 소스코드들을 모아놓고 catkin으로 컴파일하는 공간.
 작업공간안에는 여러 개의 패키지를 둘 수 있음. 여러 개의 작업공간을 가질 수 있지만 한 순간에는 하나의 작업공간에서만 작업 가능.
