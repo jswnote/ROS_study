@@ -8,9 +8,9 @@ ROS setup
   - ARM 설치 link <https://cdimage.ubuntu.com/focal/daily-live/current/>.  
   
   parallels ubuntu 20.04.5 LTS 설치
-  <p align="left"><img src = "../images/2022-12-30-ROS_2/parallels_setup.png" width = "400"  title = "parallels_setup"></p>
+  <p align="left"><img src = "./images/parallels_setup_cp.png" width = "400"  title = "parallels_setup"></p>
   ubuntu 설치 확인
-  <p align="left"><img src = "../images/2022-12-30-ROS_2/linux_version.png" width = "400"  title = "linux_version"></p>
+  <p align="left"><img src = "./images/linux_version_cp.png" width = "400"  title = "linux_version"></p>
   
 3. ROS 설치
   - ROS noetic 버전 설치
@@ -37,5 +37,5 @@ rosdep update
   - ROS noetic link <http://wiki.ros.org/noetic/Installation/Ubuntu>
   
   ROS noetic 버전 확인
-  <p align="left"><img src = "../images/2022-12-30-ROS_2/ros_version.png" width = "400"  title = "ros_version"></p>
+  <p align="left"><img src = "./images/ros_version_cp.png" width = "400"  title = "ros_version"></p>
   
