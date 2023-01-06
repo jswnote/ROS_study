@@ -8,3 +8,6 @@ ROS 마스터
   - 그러면 ros core는 이러한 정보를 검토해서 서로 연결이 필요한 노드들이 서로 p2p 연결을 형성할 수 있도록 노드들에게 정보를 제공.
 
 <p align="center"><img src = "./images/roscore.png" width = "800"  title = "roscore"></p>
+
+1. roscore 실행.
+2. counter 토픽을 발행하는 노드 실행이 되면 roscore에 노드는 counter 토픽을 발행함을 등록. 
