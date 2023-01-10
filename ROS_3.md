@@ -43,7 +43,7 @@ int main(int argc, char **argv){
 }
 ```
 
-
+<p align="center"><img src = "./images/ros_spin.png" width = "800"  title = "ros_spin"></p>
 
 
 요약.
