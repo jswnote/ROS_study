@@ -69,3 +69,8 @@ rosnode info [노드 이름]
 ```
 rostopic echo counter -n 5
 ```
+
+
+
+궁금한점 - 토픽 발행 노드를 끊으면 구독 노드도 진행 안됨. 왜그러지?
+
