@@ -24,7 +24,7 @@ int main(int argc, char **argv){
   int count = 0;
   #while 반복만 안이 실제로 데이터를 토픽으로 전송하는 부분.
   while (ros::ok()){ 
-  #ros::ok, ros가 실행되는 동안 true. ros 실행되는 동안 반복.
+  #ros::ok, ros가 실행되는 동안 true 노드가 정지되어 있으면 false. ros 실행되는 동안 반복.
     std_msgs::int32 msg; 
     #메시지 변수를 생성. 변수의 자료형은 토픽을 선언할 떄 설정한 자료형과 일치해야함. 즉, std_msgs가 토픽에 있는 <std_msgs::int32>와 일치.
     msg.data = count; 
@@ -42,6 +42,9 @@ int main(int argc, char **argv){
   return 0;
 }
 ```
+
+
+
 
 요약.
 1. ros가 실행되는 동안 계속 반복.
