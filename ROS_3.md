@@ -43,6 +43,9 @@ int main(int argc, char **argv){
 }
 ```
 
+
+
+
 요약.
 1. ros가 실행되는 동안 계속 반복.
 2. 반복주기는 lopp_rate.sleep()으로 조절.
