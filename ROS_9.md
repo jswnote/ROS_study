@@ -21,3 +21,10 @@ ROS_9
 
 로봇에서 속도를 지정하려면 6가지 속도(선형 3, 각 3)를 지정해야 하는데 이 때 ROS에서 Twist 자료형을 많이 이용. 
 Twist 자료형은 크게 Vector3 자료형의 두 변수 linear, angular 안의 x,y,z 값을 지정.
+```
+geometry_msgs::Twist msg;
+msg.linear.x = 0.5;
+msg.angular.z = 0.2;
+```
+msg 변수 생성. ROS에서 기본적인 단위는 meter, second와 rad.
+초당 0.5m 직진, 초당 0.2rad(16초당 반 바퀴) 회전. 
