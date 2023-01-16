@@ -26,3 +26,5 @@ int main(int argc, char **argv) {
 	
 	return 0;
 ```
+cmd_vel : 토픽의 이름.
+geometry_msgs : Twist 자료형. 
