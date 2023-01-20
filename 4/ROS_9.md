@@ -4,7 +4,7 @@ ROS_9
 ## 로봇의 속도.    
 
 선형 속도 - 직선 운동. 3차원의 (x,y,z) 방향의 속도를 각각 고려함. 
-<p align="center"><img src = "./images/linear.png" width = "400"  title = "linear"></p>
+<p align="center"><img src = "../images/linear.png" width = "400"  title = "linear"></p>
 
 오른손을 폈을 때, 엄지를 제외한 나머지 손가락들이 가르키는 방향이 x, 엄지가 가르키는 방향이 z, 손바닥에서 나오는 방향이 y.
 드론이 아닌 일반 자동차를 생각하면 자동차는 오로지 x축 방향으로만 이동이 가능하기 때문에 x축 방향만 고려하면 됨(좌회전, 우회전은 회전이지 y축 방향이 아님). 
