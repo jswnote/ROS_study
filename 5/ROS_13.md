@@ -11,6 +11,7 @@ ranges[0] = 0도에서 측정한 거리. ranges[1] = 1도에서 측정한 거리
 원하는 각도에 있는 장애물까지의 거리를 알 수 있음.
 
 터틀봇의 라이다에서 발행한 토픽. 터틀봇의 라이다에서는 LaserScan 메세지 자료형의 토픽을 Scan이라는 이름으로 발행. 그러므로 토픽을 구독하기 위해서는 다음과 같이 선언.
+
 ```
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
@@ -36,3 +37,5 @@ int main(int argc, char**argv) {
   geometry_msgs::Twist cmd;
 }
 ```
+
+main
