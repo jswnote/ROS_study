@@ -34,5 +34,5 @@ int main(int argc, char**argv) {
   #토픽 구독. 자료형은 LaserScan, 토픽 이름 scan, 콜백함수 scan_cb.  
   ros::Rate loop_rate(10);
   geometry_msgs::Twist cmd;
+}
 ```
-
