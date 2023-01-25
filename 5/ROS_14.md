@@ -49,7 +49,61 @@ rosrun wanderbot go_scan
 계산식 생략. 여유있게 양쪽 15도 총 30도 여유있게 범위 측정. 물론 움직임이 있는 장애물이 사각지대로 들어올 수 있지만 여기서는 생략.
 
 
-코드 수정.
+코드 수정. 스캔 콜백 함수만 수정.
+
+```
+#include "ros/ros.h"
+#include "geometry_msgs/Twist.h"
+#include "sensor_msgs/LaserScan.h"
+
+Float range_ahead;
+#main에서 이용하기 위해 외부 변수로 선언.
+#이렇게 하면 Scan 토픽이 수신될 때마다 정면 0도 방향의 거리가 range_ahead에 저장. 그 값이 출력.
+
+void scan_cb(const sensor_msgs::LaserScan::ConstPtr& msg) {
+  range_ahead = 3.0;
+  for(int i=0; i<=15; i++) {
+    if(msg->ranges[i] < range_ahead)
+      range_ahead = msg->ranges[i];
+  }
+  for(int i=359; i>=345; i--) {
+    if(msg->ranges[i] < range_ahead)
+      range_ahead = msg->ranges[i];
+  }
+  #정면 0도 각도 방향의 장애물까지의 거리를 range_ahead에 저장 변수에 저장.  
+  printf("range ahead: %f\n", range_ahead);
+}
+
+int main(int argc, char**argv) {
+  ros::init(argc, argv, "go_scan");
+  ros::NodeHandle n;
+  ros::Publisher  cmd_pub = n.advertise<geometry_msgs::Twist>("cmd_vel",1);
+  ros::Subscriber scan_pub = n.subscribe<sensor_msgs::LaserScan>("scan", 1, scan_cb);
+  #토픽 구독. 자료형은 LaserScan, 토픽 이름 scan, 콜백함수 scan_cb.  
+  ros::Rate loop_rate(10);
+  geometry_msgs::Twist cmd;
 
 
+
+#main 함수에서는 이렇게 측정한 거리에 따라 적절히 터틀봇을 조종할 수 있음.
+
+ros::Rate loop_rate(10);
+  geometry_msgs::Twist  cmd;
+
+  while(ros::ok()) {
+    if(range_ahead < 0.8) {
+    cmd.linear.x = 0;
+    cmd.angular.z = 0.2;
+    } else {
+        cmd.linear.x = 0.2;
+        cmd.angular.z = 0;
+    }
+    cmd_pub.publish(cmd);
+    ros::spinOnce();
+    loop_rate.sleep();
+  }
+  
+  return 0;
+}
+```
 
