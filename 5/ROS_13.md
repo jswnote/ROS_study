@@ -35,12 +35,11 @@ int main(int argc, char**argv) {
   #토픽 구독. 자료형은 LaserScan, 토픽 이름 scan, 콜백함수 scan_cb.  
   ros::Rate loop_rate(10);
   geometry_msgs::Twist cmd;
-}
-```
 
-main 함수에서는 이렇게 측정한 거리에 따라 적절히 터틀봇을 조종할 수 있음.
 
-```
+
+#main 함수에서는 이렇게 측정한 거리에 따라 적절히 터틀봇을 조종할 수 있음.
+
 ros::Rate loop_rate(10);
   geometry_msgs::Twist  cmd;
 
