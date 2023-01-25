@@ -40,4 +40,6 @@ rosrun wanderbot go_scan
 ```
 
 
+<p align="left"><img src = "../images/turtlebot_error.png" width = "400"  title = "turtlebot_error"></p>
+
 
