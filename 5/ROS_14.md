@@ -173,4 +173,7 @@ ros::Rate loop_rate(10);
   return 0;
 }
 ```
-  
+
+float32 angle_min: start angle of the scan [rad]
+float32 angle_max: end angle of the scan [rad]
+float32 angle_increment: angular distance between measurements [rad]
