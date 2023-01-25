@@ -3,7 +3,7 @@ ROS_8
 # 4. 로봇의 구동  
 ## ROS 메세지의 자료형. 
 
-<p align="center"><img src = "./images/ros_msg.png" width = "800"  title = "ros_msg"></p>. 
+<p align="center"><img src = "../images/ros_msg.png" width = "800"  title = "ros_msg"></p>. 
 
 signed : 정수형 변수 중 부호를 갖는 변수를 선언 (양수, 음수의 구분). 
 unsigned : 음수를 사용하지 않는 변수. 
@@ -24,7 +24,7 @@ ROS에서는 기본 자료형 외에도 다양한 자료형들을 패키지로 �
 rosmsg package sensor_msgs
 ```
 
-<p align="center"><img src = "./images/sensor_msgs.png" width = "500"  title = "sensor_msgs"></p>.  
+<p align="center"><img src = "../images/sensor_msgs.png" width = "500"  title = "sensor_msgs"></p>.  
 
 ROS에서 제공되는 자료형 외에 다른 자료형이 필요하면 사용자가 직접 자료형을 정의하여 사용 가능.  
 기본 자료형이외의 다른 자료형들은 보통 기본 자료형 데이터를 묶어서 만들어짐. 
