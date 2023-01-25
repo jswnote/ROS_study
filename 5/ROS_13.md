@@ -11,3 +11,28 @@ ranges[0] = 0도에서 측정한 거리. ranges[1] = 1도에서 측정한 거리
 원하는 각도에 있는 장애물까지의 거리를 알 수 있음.
 
 터틀봇의 라이다에서 발행한 토픽. 터틀봇의 라이다에서는 LaserScan 메세지 자료형의 토픽을 Scan이라는 이름으로 발행. 그러므로 토픽을 구독하기 위해서는 다음과 같이 선언.
+```
+#include "ros/ros.h"
+#include "geometry_msgs/Twist.h"
+#include "sensor_msgs/LaserScan.h"
+
+Float range_ahead;
+#main에서 이용하기 위해 외부 변수로 선언.
+#이렇게 하면 Scan 토픽이 수신될 때마다 정면 0도 방향의 거리가 range_ahead에 저장. 그 값이 출력.
+
+void scan_cb(const sensor_msgs::LaserScan::ConstPtr& msg) {
+  range_ahead = msg->ranges[0];
+  #정면 0도 각도 방향의 장애물까지의 거리를 range_ahead에 저장 변수에 저장.  
+  printf("range ahead: %f\n", range_ahead);
+}
+
+int main(int argc, char**argv) {
+  ros::init(argc, argv, "go_scan");
+  ros::NodeHandle n;
+  ros::Publisher  cmd_pub = n.advertise<geometry_msgs::Twist>("cmd_vel",1);
+  ros::Subscriber scan_pub = n.subscribe<sensor_msgs::LaserScan>("scan", 1, scan_cb);
+  #토픽 구독. 자료형은 LaserScan, 토픽 이름 scan, 콜백함수 scan_cb.  
+  ros::Rate loop_rate(10);
+  geometry_msgs::Twist cmd;
+```
+
