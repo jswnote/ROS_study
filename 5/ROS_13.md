@@ -38,4 +38,27 @@ int main(int argc, char**argv) {
 }
 ```
 
-main
+main 함수에서는 이렇게 측정한 거리에 따라 적절히 터틀봇을 조종할 수 있음.
+
+```
+ros::Rate loop_rate(10);
+  geometry_msgs::Twist  cmd;
+
+  while(ros::ok()) {
+    if(range_ahead < 0.8) {
+    cmd.linear.x = 0;
+    cmd.angular.z = 0.2;
+    } else {
+        cmd.linear.x = 0.2;
+        cmd.angular.z = 0;
+    }
+    cmd_pub.publish(cmd);
+    ros::spinOnce();
+    loop_rate.sleep();
+  }
+  
+  return 0;
+}
+```
+    
+  
