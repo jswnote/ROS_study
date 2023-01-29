@@ -13,3 +13,4 @@ ROS_15
 
 대표적인 영상 처리 예제인 노란색 차선을 따라가는 프로그램을 만든다고 하자. 
 
+<p align="center"><img src = "../images/ros_yellow.png" width = "400"  title = "ros_yellow"></p>
