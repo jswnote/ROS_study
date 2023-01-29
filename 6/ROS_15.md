@@ -28,7 +28,7 @@ ROS_15
 
 따라서, RGB대신 HSV로 표현. 
 HSV: 하나의 색을 Hue(색상), Saturation(채도), Value(명도)로 표현하는 방법.  
-<p align="center"><img src = "../images/hsv.png" width = "600"  title = "HSV"></p>.
+<p align="center"><img src = "../images/hsv.png" width = "600"  title = "HSV"></p>.   
 결국에 RGB값은 서로 다르지만 HSV로 표현하면 값의 차이가 크지가 않음. 이런 부분에서 조건문을 짜기가 편해짐. 
 
 
