@@ -28,4 +28,4 @@ ROS_15
 
 따라서, RGB대신 HSV로 표현. 
 HSV: 하나의 색을 Hue(색상), Saturation(채도), Value(명도)로 표현하는 방법.  
-<p align="center"><img src = "../images/hsv.png.png" width = "600"  title = "hsv></p> 
+<p align="center"><img src = "../images/hsv.png" width = "600"  title = "hsv></p> 
