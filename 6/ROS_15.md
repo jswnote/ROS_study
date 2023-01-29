@@ -18,3 +18,6 @@ ROS_15
 위 그림과 같이 노란색 중앙선이 있는 카메라의 영상 하나를 입력받으면 추출하는 그릠과 같이 하늘, 도로는 검정색으로 노란색 중앙선만 흰색으로 추출된다.   
 그런데 경로를 잡으려면 너무 앞이나 너무 뒤가 아닌 중간 쪽을 목표로 움직여야 함. 그래서 적절한 부분을 골라내고 그 부분에 대해 중심점을 계산한다.   
 이 중심점을 이용하여 로봇이나 차량을 제어. 노란색 점선은 화면의 중앙을 의미. 
+<p align="left"><img src = "../images/yellow_1.png" width = "400"  title = "yellow_1"></p>
+<p align="center"><img src = "../images/yellow_2.png" width = "400"  title = "yellow_2"></p>
+<p align="right"><img src = "../images/yellow_3.png" width = "400"  title = "yellow_3"></p>
